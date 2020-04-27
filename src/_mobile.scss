@@ -1,0 +1,129 @@
+//widescreens
+@include mediaXl{
+    .fa-bars:before {
+        display: none;
+    }
+    .navbar-menu{
+        position: relative;
+        background-color: transparent;
+        float: right;
+        top:0;
+        width: auto;
+        height: auto;
+        transition: none;
+    }
+    .navbar-menu.show{
+        height:  auto;
+    }
+    .nav-item{
+        display: inline-block;
+        height: 70px;
+        line-height: 70px;
+    }
+    .nav-item:hover{
+        background-color: transparent;
+    }
+    .nav-link{
+        display: block;
+        padding: 20px;
+        color: #17252a;
+        &:hover{
+            color:#fff;
+        }
+    }
+    .projects{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    }
+    @include mediaLg{
+        .fa-bars:before {
+            display: none;
+        }
+        .navbar-menu{
+            position: relative;
+            background-color: transparent;
+            float: right;
+            top:0;
+            width: auto;
+            height: auto;
+            transition: none;
+        }
+        .navbar-menu.show{
+            height:  auto;
+        }
+        .nav-item{
+            display: inline-block;
+            height: 70px;
+            line-height: 70px;
+        }
+        .nav-item:hover{
+            background-color: transparent;
+        }
+        .nav-link{
+            display: block;
+            padding: 20px;
+            color: #17252a;
+            &:hover{
+                color:#fff;
+        }
+    }
+        .projects{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    @include mediaMd{
+        .navbar-menu{
+            background-color: rgba(34, 34, 34, 0.5);
+        }
+        main{
+            align-items: center;
+            text-align: center;
+            
+        .lg-heading{
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        }
+        ul.menu-nav, div.menu-branding{
+            float: none;
+            width: 100%;
+            min-width: 0;
+        }
+        .menu-nav{
+            height: 100vh;
+            transform: translate3d(-100%,0,0);
+            font-size: 24px;
+        }
+        .menu-branding{
+            height: 0;
+        }
+        .about-info{
+            grid-template-areas:
+            'bioimage'
+            'bio'
+            'job1'
+            'job2'
+            'job3';
+            grid-template-columns: 1fr;
+        } 
+        .projects{
+            grid-template-columns: repeat(2, 1fr);
+        } 
+    }
+    @include mediaSm{
+        .navbar-menu{
+            background-color: rgba(34, 34, 34, 0.5);
+        }
+        main#home{
+            margin-top: 50px;
+        }
+        main#home h1{
+            margin-top: 10vh; 
+            font-size: 5rem;
+        }
+        .projects{
+            grid-template-columns: 1fr;
+        }
+    }
+    

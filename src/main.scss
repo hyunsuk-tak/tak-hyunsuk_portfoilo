@@ -1,0 +1,244 @@
+@import "variables";
+@import "mixins";
+@import "menu";
+
+*{  
+    // margin:0;
+    // padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    @include backImg('../img/back1.jpg');
+    background: $primary-color;
+    color:#fff;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: $font-body;
+    line-height: 1.5;
+}
+//headings
+h1,h2,h3{
+    margin: 0;
+    font-weight: 400;
+    &.lg-heading{
+     font-size: 6rem;
+    }
+    &.sm-heading{
+        margin-bottom: 2rem;
+        padding: 0.2rem 1rem;
+        background-image: linear-gradient(to right, royalblue, aquamarine );
+      };
+    }
+    #sidle{
+      animation-duration: 3s;
+      animation-name: slidein;
+    }
+    @keyframes slidein {
+      from {
+        margin-left: 100%;
+        width: 300%
+      }
+    
+      to {
+        margin-left: 0%;
+        width: 100%;
+      }
+    }
+a{
+    color: #fff;
+    text-decoration: none;
+}
+.navbar-brand:hover{
+color:$scondary-color;
+}
+header{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+.text-secondary{
+    color:$scondary-color;
+}
+main{
+    padding: 4rem;
+    min-height: calc(100vh - 60px);
+    .icons{
+        margin-top: 1rem;
+        a{
+            padding: 0.4rem;
+            @include easeOut();   
+            &:hover{
+                color:$scondary-color;
+                       
+            }
+        }
+    }
+    &#home{
+        overflow: hidden;
+        h1{
+            margin-top: 20vh;
+        }
+
+    }
+}
+
+// grid
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+    'bioimage bio bio'
+    'job1 job2 job3';
+  grid-template-columns: repeat(3, 1fr);
+
+  .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 10px;
+  }
+
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+  }
+
+  .job-1 {
+    grid-area: job1;
+  }
+
+  .job-2 {
+    grid-area: job2;
+  }
+
+  .job-3 {
+    grid-area: job3;
+  }
+
+  .job {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    &:hover{
+      transform: scale(1.0515);
+      box-shadow: 0 6px 20px 0 rgba(0,0,0,0.2);
+    }
+
+  }
+}
+.job h3{
+  border-bottom: dotted 2px royalblue;
+}
+.job h5{
+  margin: 10px 0 10px 0;
+}
+.jContainer{
+  width: 100%;
+  background-color:#ccc;
+}
+.personal{
+  text-align: right;
+}
+.create{
+  width: 65%; 
+  background-color: red;
+}
+.team{
+  width: 75%; 
+  background-color: darkgreen;
+}
+.communi{
+  width: 50%; 
+  background-color: darkblue;
+}
+.lead{
+  width: 40%; 
+  background-color: rgb(48, 48, 47);
+}
+.print{
+  width: 70%; 
+  background-color: red;
+}
+.video{
+  width: 40%; 
+  background-color: darkgreen;
+}
+.html{
+  width: 50%; 
+  background-color: darkblue;
+}
+.java{
+  width: 20%; 
+  background-color: rgb(48, 48, 47);
+}
+
+
+//works
+.projects{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+
+
+    img{
+        width: 100%;
+        border: solid 3px #fff;
+        }
+    }
+// button styles
+.btn{
+  width: 100%;
+   display: block;
+   font-size: 1rem;
+   font-weight: bold;
+   color: #fff;
+   padding: 0.5rem 1rem;
+   border: 0;
+   margin-bottom: 0.3rem;
+   background:rgba(#ccc, 0.3);
+   
+}
+.btn.active,.btn:hover{
+background: $scondary-color;
+}
+.panel {
+  color: black;
+  background:rgba(#ccc, 0.3);
+	padding:1.125em;
+  display: none;
+  overflow: hidden;
+}
+//contact
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+  
+    div {
+      font-size: 2rem;
+      border: 3px #fff solid;
+      padding: 1.5rem 2.5rem;
+      margin-bottom: 3rem;
+    &:hover{
+        background: $scondary-color;
+        color: #fff;
+        @include easeOut;
+        .text-secondary{
+            color:$primary-color;
+        }
+    }
+    }
+  }
+  
+#main-footer{
+    text-align: center;
+    padding: 1rem;
+    background: darken($primary-color, 10);
+    height: 60px;
+    
+}
+
+
+@import "mobile";
