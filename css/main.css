@@ -15,7 +15,7 @@
 }
 
 .navbar {
-  width: calc(100%-120px);
+  width: calc(100% - 120px);
   margin: 0 60px;
   overflow: hidden;
 }
@@ -27,6 +27,7 @@
   top: 50%;
   transform: translateY(-50%);
   font-size: 30px;
+  text-shadow: 2px 2px 2px #000000;
   cursor: pointer;
 }
 
@@ -190,10 +191,16 @@ main#home h1 {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.about-info .text-bio {
+  font-size: 2.5rem;
+  color: #17252a;
+}
+
 .about-info .bio-image {
   grid-area: bioimage;
   margin: auto;
-  border-radius: 10px;
+  border: 5px solid #ddd;
+  border-radius: 50%;
 }
 
 .about-info .bio {
@@ -301,6 +308,11 @@ main#home h1 {
   border: 0;
   margin-bottom: 0.3rem;
   background: rgba(204, 204, 204, 0.3);
+}
+
+.btn i {
+  padding-left: 3rem;
+  padding-bottom: .5rem;
 }
 
 .btn.active, .btn:hover {
